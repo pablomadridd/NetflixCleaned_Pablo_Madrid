@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Favourite Movies</title>
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&display=swap">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+</head>
+<body>
+    <nav>
+        <a href="#home" data-slide="0">Home</a>
+        <a href="#movies" data-slide="1">Movies</a>
+        <a href="#profile" data-slide="2">Profile</a>
+    </nav>
+    <main>
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <!-- Home Section -->
+                <section class="swiper-slide" id="home">
+                    <h1>Welcome to Netflix</h1>
+                    <p>This is the Home section.</p>
+                </section>
+                
+                <!-- Movies Section -->
+                <section class="swiper-slide" id="movies">
+                    <h1>Movies</h1>
+                    <div id="main"></div> <!-- Mantén tus vistas dinámicas aquí -->
+                </section>
+                
+                <!-- Profile Section -->
+                <section class="swiper-slide" id="profile">
+                    <h1>Your Profile</h1>
+                    <p>Manage your account and preferences.</p>
+                </section>
+            </div>
+            
+            <!-- Swiper Controls -->
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </main>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="./app/Navigation.js"></script>
+    <script src="./app/Old.js"></script>
+</body>
+</html>

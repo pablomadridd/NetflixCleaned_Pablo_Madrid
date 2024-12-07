@@ -1,0 +1,102 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+}
+
+nav a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+section {
+    padding: 20px;
+    display: none;
+}
+
+
+/* Movies Section */
+#main {
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+div.movie {
+    display: inline-block;
+    width: auto;
+    padding: 10px;
+    box-shadow: 2px 2px 7px #ccc;
+    margin: 5px;
+}
+
+div.movie div.movie-img img {
+    width: 100%;
+    height: auto;
+}
+
+div.field, div.actions {
+    margin-top: 10px;
+}
+
+/* Buttons */
+button {
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    margin: 2px;
+    padding: 0 8px;
+    height: 20px;
+    font-size: 9px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: ease-in 0.2s all;
+    border: 1px solid var(--primary);
+}
+
+button.index, button.search {
+    background: var(--primary);
+    color: white;
+}
+
+button:hover {
+    background: white;
+    color: var(--primary);
+}
+
+
+.swiper {
+    width: 100%;
+    height: 100vh; /* Altura completa de la ventana */
+}
+
+/* Estilo para cada diapositiva */
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh; /* Cada diapositiva ocupa la pantalla completa */
+    background: #f4f4f4; /* Fondo claro por defecto */
+}
+
+/* Estilo opcional para secciones */
+section {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}

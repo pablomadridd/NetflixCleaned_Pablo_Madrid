@@ -1,0 +1,17 @@
+/* Contenedor del logo */
+.logo-container {
+    position: absolute;
+    top: 40px; /* Separación desde la parte superior */
+    left: 40px; /* Separación desde la izquierda */
+    z-index: 10; /* Asegura que esté por encima del fondo */
+}
+
+/* Imagen del logo */
+.netflix-logo {
+    width: 300px; /* Tamaño ajustable */
+    height: auto; /* Mantener proporciones */
+}
+
+
+
+

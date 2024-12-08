@@ -8,6 +8,7 @@ let initial_movies = [
 
 
     localStorage.my_movies = localStorage.my_movies || JSON.stringify(initial_movies);
+    
 
 
     // VIEWS
@@ -304,17 +305,20 @@ let initial_movies = [
     
     const searchView = () => {
         return `
-            <h2>Search for a Movie</h2>
-            <div style="display: flex; justify-content: center; gap: 10px;">
-                <input type="text" id="search-query" placeholder="Enter movie title" />
-                <button class="search">Search</button>
-                <button class="index">Back</button> <!-- Botón Back agregado -->
-            </div>
-            <div id="search-results">
-                <p>No search results yet. Please enter a movie title and press search.</p>
+            <div class="animated-content">
+                <h2>Search for a Movie</h2>
+                <div style="display: flex; justify-content: center; gap: 10px;">
+                    <input type="text" id="search-query" placeholder="Enter movie title" />
+                    <button class="search">Search</button>
+                    <button class="index">Back</button>
+                </div>
+                <div id="search-results">
+                    <p>No search results yet. Please enter a movie title and press search.</p>
+                </div>
             </div>
         `;
     };
+    
 
     const searchContr = () => {
         const query = document.getElementById('search-query').value.trim();
@@ -426,6 +430,25 @@ let initial_movies = [
             alert(`Keyword "${keyword}" is already in your list.`);
         }
     };
+
+
+    const homeView = () => {
+        let background = '';
+        for (let i = 0; i < 36; i++) {
+            background += `<div class="animate-me"></div>`;
+        }
+    
+        return `
+            <div class="background-container">
+                ${background}
+            </div>
+            <div class="animated-content">
+                <h1>Welcome to Netflix</h1>
+                <p>This is the Home section.</p>
+            </div>
+        `;
+    };
+    
     
     // End nuevo
 

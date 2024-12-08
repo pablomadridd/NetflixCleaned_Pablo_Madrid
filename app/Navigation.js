@@ -57,3 +57,57 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
+
+// Animacion Movies 
+
+document.addEventListener('DOMContentLoaded', () => {
+    const movies = document.querySelectorAll('.movie');
+    movies.forEach((movie, index) => {
+        movie.style.animationDelay = `${index * 0.2}s`; // Escalonar animaciones
+    });
+});
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const homeBackground = document.querySelector('#home .background-container');
+
+    if (homeBackground) {
+        for (let i = 0; i < 36; i++) {
+            const div = document.createElement('div');
+            div.className = 'animate-me';
+            homeBackground.appendChild(div);
+        }
+
+        const divs = homeBackground.querySelectorAll('.animate-me');
+
+        divs.forEach((div, i) => {
+            // Generar coordenadas aleatorias para las posiciones iniciales
+            const randomX = Math.random() * 100 - 50; // Entre -50% y 50%
+            const randomY = Math.random() * 100 - 50; // Entre -50% y 50%
+
+            div.style.setProperty('--x', randomX);
+            div.style.setProperty('--y', randomY);
+
+            // Aplicar animaciones
+            div.animate([
+                {
+                    transform: 'scale(0)',
+                    opacity: 0,
+                },
+                {
+                    transform: `scale(${Math.random() * 1.5 + 0.5}) translate(${randomX}%, ${randomY}%)`,
+                    opacity: 1,
+                }
+            ], {
+                duration: 3000,
+                easing: 'cubic-bezier(0.68, -0.55, 0.265, 1.55)',
+                delay: i * 100,
+                iterations: Infinity,
+                direction: 'alternate',
+                fill: 'both',
+            });
+        });
+    }
+});

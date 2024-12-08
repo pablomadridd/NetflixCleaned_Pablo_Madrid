@@ -80,6 +80,18 @@ button:hover {
   height: 100vh; /* Altura completa de la ventana */
 }
 
+/* Borrar*/
+.movie {
+  cursor: grab;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.movie.dragging {
+  opacity: 0.5;
+  border: 2px dashed #ff5757;
+  background-color: #ffe6e6;
+}
+
 /* Estilo para cada diapositiva */
 .swiper-slide {
   display: flex;
@@ -186,32 +198,6 @@ html {
 .netflix-logo {
   width: 300px; /* Tamaño ajustable */
   height: auto; /* Mantener proporciones */
-}
-
-/* Configuración del fondo animado */
-/* Contenedor de fondo en la sección Home */
-#home .background-container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(to right, #000000, #FF0000); /* Degradado */
-  overflow: hidden;
-  z-index: -1; /* Asegurar que el fondo no cubra el contenido */
-}
-
-/* Divs animados */
-.animate-me {
-  background: linear-gradient(to top left, #556270, #F2FF00);
-  width: 160px;
-  height: 160px;
-  border-radius: 50%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  mix-blend-mode: lighten;
-  opacity: 0;
 }
 
 /* Profile

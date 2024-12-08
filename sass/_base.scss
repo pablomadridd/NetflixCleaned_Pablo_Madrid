@@ -1,0 +1,17 @@
+body {
+    font-family: $font-family;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+  }
+  
+  html,
+  body {
+    height: 100%;
+  }
+  
+  button {
+    @include transition(all);
+    cursor: pointer;
+  }
+  

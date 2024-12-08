@@ -1,0 +1,66 @@
+.profile-header {
+    @include flex-center;
+    justify-content: space-between;
+    background: $background-gradient;
+    color: white;
+    padding: 20px;
+    box-shadow: $box-shadow;
+  
+    h1 {
+      font-size: 24px;
+    }
+  
+    .settings-button {
+      @include flex-center;
+      background: $primary-color;
+      padding: 8px 16px;
+      border-radius: 5px;
+      font-size: 16px;
+  
+      &:hover {
+        background: color.scale($primary-color, $lightness: -14.91%);
+
+
+      }
+    }
+  }
+  
+  .profile-card {
+    @include flex-center;
+    flex-direction: column;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+  
+    .profile-avatar {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      margin-bottom: 15px;
+    }
+  }
+  
+
+
+  @media (max-width: 768px) {
+    .profile-header {
+      flex-direction: column; // Cambiar a disposición en columna
+      align-items: flex-start;
+  
+      h1 {
+        font-size: 20px;
+        margin-bottom: 10px;
+      }
+  
+      .settings-button {
+        width: 100%; // Botón ocupa todo el ancho
+      }
+    }
+  
+    .profile-card {
+      width: 90%; // Ocupa casi toda la pantalla
+      padding: 10px;
+    }
+  }
+  

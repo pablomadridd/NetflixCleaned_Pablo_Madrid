@@ -198,3 +198,128 @@ html {
     width: 300px; /* Tamaño ajustable */
     height: auto; /* Mantener proporciones */
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Profile
+
+/* Profile Header */
+.profile-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: linear-gradient(to right, #1d1d1d, #3d3d3d);
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.profile-header h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+.settings-button {
+    background: #ff5757;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: transform 0.2s, background 0.3s;
+}
+
+.settings-button:hover {
+    transform: scale(1.1);
+    background: #ff3d3d;
+}
+
+/* Profile Content */
+.profile-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100% - 60px); /* Ajusta para dejar espacio al header */
+}
+
+.profile-card {
+    text-align: center;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    animation: slideIn 0.6s ease-out;
+}
+
+.profile-avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    border: 3px solid #ff5757;
+}
+
+/* Settings Panel */
+.settings-panel {
+    position: absolute;
+    top: 0;
+    right: -400px; /* Oculto inicialmente */
+    width: 300px;
+    height: 100%;
+    background: #1d1d1d;
+    color: white;
+    box-shadow: -4px 0 8px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    transition: right 0.4s ease;
+    z-index: 20;
+}
+
+.settings-panel h2 {
+    margin-top: 0;
+}
+
+.settings-panel ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.settings-panel ul li {
+    margin: 10px 0;
+    padding: 10px;
+    background: #3d3d3d;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.settings-panel ul li:hover {
+    background: #ff5757;
+}
+
+/* Animaciones */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+

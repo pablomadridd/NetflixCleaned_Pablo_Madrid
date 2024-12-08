@@ -111,3 +111,22 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+
+
+// Profile
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const settingsButton = document.querySelector('.settings-button');
+    const settingsPanel = document.querySelector('.settings-panel');
+    const closeSettings = document.querySelector('.close-settings');
+
+    settingsButton.addEventListener('click', () => {
+        settingsPanel.style.right = '0'; // Mostrar panel
+    });
+
+    closeSettings.addEventListener('click', () => {
+        settingsPanel.style.right = '-400px'; // Ocultar panel
+    });
+});

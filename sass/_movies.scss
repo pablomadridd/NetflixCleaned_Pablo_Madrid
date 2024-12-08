@@ -1,52 +1,53 @@
+/* Movies Section */
 #main {
-    background-color: #f4f4f4;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: $box-shadow;
-  
-    .movie {
-      display: inline-block;
-      margin: 5px;
-      box-shadow: 2px 2px 7px #ccc;
-      animation: popIn 0.5s ease-out forwards;
-  
-      &:hover {
-        transform: scale(1.05);
-        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
-      }
-  
-      img {
-        width: 100%;
-        height: auto;
-      }
-    }
-  }
-  
-  @keyframes popIn {
-    from {
-      opacity: 0;
-      transform: scale(0.8);
-    }
-    to {
-      opacity: 1;
-      transform: scale(1);
-    }
-  }
-  
+  background-color: #f4f4f4;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
 
-  @media (max-width: 768px) {
-    #main {
-      padding: 10px;
-    }
-  
-    .movie {
-      width: 100%; // Cada película ocupa toda la fila
-      margin-bottom: 10px;
-    }
-  
-    .movie img {
-      width: 100%; // Asegurarse de que las imágenes sean responsivas
-      height: auto;
-    }
-  }
-  
+div.movie {
+  display: inline-block;
+  width: auto;
+  padding: 10px;
+  box-shadow: 2px 2px 7px #ccc;
+  margin: 5px;
+}
+
+div.movie div.movie-img img {
+  width: 100%;
+  height: auto;
+}
+
+div.field, div.actions {
+  margin-top: 10px;
+}
+
+/* Buttons */
+button {
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  margin: 2px;
+  padding: 0 8px;
+  height: 20px;
+  font-size: 9px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: ease-in 0.2s all;
+  border: 1px solid var(--primary);
+}
+
+button.index, button.search {
+  background: var(--primary);
+  color: white;
+}
+
+button:hover {
+  background: white;
+  color: var(--primary);
+}
+
+.swiper {
+  width: 100%;
+  height: 100vh; /* Altura completa de la ventana */
+}

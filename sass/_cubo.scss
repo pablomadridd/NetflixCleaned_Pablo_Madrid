@@ -1,0 +1,28 @@
+/* Movies cubo
+
+/* Animación de deslizamiento y desvanecimiento */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Aplica la animación solo cuando el contenido se muestra */
+.animated-content {
+    animation: slideIn 0.5s ease-out;
+}
+
+
+/* Configuración del cuerpo y la página */
+body,
+html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+}

@@ -1,18 +1,173 @@
-/* Error: There is no module with the namespace "color".
- *    ,
- * 21 |         background: color.scale($primary-color, $lightness: -14.91%);
- *    |                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
- *    '
- *   sass/_profile.scss 21:21  @import
- *   sass/main.scss 7:9        root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: 'Error: There is no module with the namespace "color".\a    \2577 \a 21 \2502          background: color.scale($primary-color, $lightness: -14.91%);\a    \2502                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\a    \2575 \a   sass/_profile.scss 21:21  @import\a   sass/main.scss 7:9        root stylesheet';
+body {
+  font-family: "Arial, sans-serif";
+  margin: 0;
+  padding: 0;
+  overflow: auto;
 }
+
+html,
+body {
+  height: 100%;
+}
+
+button {
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+nav {
+  background-color: #3d3d3d;
+  color: white;
+  padding: 10px;
+}
+nav a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+}
+nav a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  nav a {
+    font-size: 12px;
+    padding: 5px;
+  }
+  nav {
+    padding: 5px;
+  }
+}
+#home .background-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, #000000, #ff0000);
+  z-index: -1;
+}
+#home .animate-me {
+  background: linear-gradient(to top left, #556270, #f2ff00);
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  position: absolute;
+  mix-blend-mode: lighten;
+}
+
+@media (max-width: 768px) {
+  #home .background-container {
+    background-size: cover;
+  }
+  .animate-me {
+    width: 80px;
+    height: 80px;
+  }
+}
+#main {
+  background-color: #f4f4f4;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+#main .movie {
+  display: inline-block;
+  margin: 5px;
+  box-shadow: 2px 2px 7px #ccc;
+  animation: popIn 0.5s ease-out forwards;
+}
+#main .movie:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+}
+#main .movie img {
+  width: 100%;
+  height: auto;
+}
+
+@keyframes popIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@media (max-width: 768px) {
+  #main {
+    padding: 10px;
+  }
+  .movie {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .movie img {
+    width: 100%;
+    height: auto;
+  }
+}
+.profile-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(to right, #1d1d1d, #3d3d3d);
+  color: white;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.profile-header h1 {
+  font-size: 24px;
+}
+.profile-header .settings-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ff5757;
+  padding: 8px 16px;
+  border-radius: 5px;
+  font-size: 16px;
+}
+.profile-header .settings-button:hover {
+  background: rgb(38.25, 13.05, 13.05);
+}
+
+.profile-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+}
+.profile-card .profile-avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+@media (max-width: 768px) {
+  .profile-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .profile-header h1 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  .profile-header .settings-button {
+    width: 100%;
+  }
+  .profile-card {
+    width: 90%;
+    padding: 10px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

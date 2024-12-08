@@ -130,3 +130,64 @@ document.addEventListener('DOMContentLoaded', () => {
         settingsPanel.style.right = '-400px'; // Ocultar panel
     });
 });
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Función para cambiar avatar
+    const changeAvatar = () => {
+        const newAvatar = prompt("Enter the URL of your new avatar:");
+        if (newAvatar) {
+            document.querySelector('.profile-avatar').src = newAvatar;
+            alert("Avatar updated successfully!");
+        }
+    };
+
+    // Función para actualizar email
+    const updateEmail = () => {
+        const newEmail = prompt("Enter your new email address:");
+        if (newEmail) {
+            document.querySelector('.profile-card p:nth-of-type(1)').textContent = `Email: ${newEmail}`;
+            alert("Email updated successfully!");
+        }
+    };
+
+    // Función para cambiar contraseña
+    const changePassword = () => {
+        const newPassword = prompt("Enter your new password:");
+        if (newPassword) {
+            alert("Password updated successfully!");
+            // Aquí podrías agregar una lógica para guardar el password en tu backend o base de datos
+        }
+    };
+
+    // Agregar eventos a los botones
+    document.querySelector('.settings-panel li:nth-of-type(1)').addEventListener('click', changeAvatar);
+    document.querySelector('.settings-panel li:nth-of-type(2)').addEventListener('click', updateEmail);
+    document.querySelector('.settings-panel li:nth-of-type(3)').addEventListener('click', changePassword);
+});
+
+
+const highlightProfileCard = () => {
+    const profileCard = document.querySelector('.profile-card');
+    profileCard.classList.add('updated');
+    setTimeout(() => profileCard.classList.remove('updated'), 500); // Eliminar la clase tras la animación
+};
+
+// Llama a `highlightProfileCard()` después de actualizar el avatar o email:
+changeAvatar = () => {
+    const newAvatar = prompt("Enter the URL of your new avatar:");
+    if (newAvatar) {
+        document.querySelector('.profile-avatar').src = newAvatar;
+        highlightProfileCard();
+        alert("Avatar updated successfully!");
+    }
+};
+
+updateEmail = () => {
+    const newEmail = prompt("Enter your new email address:");
+    if (newEmail) {
+        document.querySelector('.profile-card p:nth-of-type(1)').textContent = `Email: ${newEmail}`;
+        highlightProfileCard();
+        alert("Email updated successfully!");
+    }
+};

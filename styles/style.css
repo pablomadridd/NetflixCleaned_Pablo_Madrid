@@ -216,6 +216,7 @@ html {
 /* Profile
 
 /* Profile Header */
+/* Profile Header */
 .profile-header {
     display: flex;
     justify-content: space-between;
@@ -232,20 +233,27 @@ html {
 }
 
 .settings-button {
+    display: flex; /* Asegura que el contenido esté centrado */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
     background: #ff5757;
     border: none;
     color: white;
-    padding: 10px 20px;
-    font-size: 16px;
+    padding: 8px 16px; /* Ajuste de espacio interno */
+    font-size: 16px; /* Ajuste del tamaño de fuente */
+    font-weight: bold; /* Resalta el texto */
     cursor: pointer;
     border-radius: 5px;
     transition: transform 0.2s, background 0.3s;
+    text-transform: uppercase; /* Asegura el estilo del texto */
+    white-space: nowrap; /* Evita que el texto se corte o salte de línea */
 }
 
 .settings-button:hover {
     transform: scale(1.1);
     background: #ff3d3d;
 }
+
 
 /* Profile Content */
 .profile-content {
@@ -323,3 +331,16 @@ html {
 }
 
 
+/* Animación de actualización */
+@keyframes glow {
+    from {
+        box-shadow: 0 0 5px rgba(255, 255, 255, 0);
+    }
+    to {
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+    }
+}
+
+.profile-card.updated {
+    animation: glow 0.5s ease-in-out;
+}

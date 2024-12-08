@@ -38,7 +38,7 @@ div.movie {
   display: inline-block;
   width: auto;
   padding: 10px;
-  box-shadow: 2px 2px 7px #ccc;
+  box-shadow: 2px 2px 7px #ff5757;
   margin: 5px;
 }
 
@@ -67,29 +67,17 @@ button {
 
 button.index, button.search {
   background: var(--primary);
-  color: white;
+  color: #ff5757;
 }
 
 button:hover {
-  background: white;
+  background: #ff5757;
   color: var(--primary);
 }
 
 .swiper {
   width: 100%;
   height: 100vh; /* Altura completa de la ventana */
-}
-
-/* Borrar*/
-.movie {
-  cursor: grab;
-  transition: background-color 0.2s ease, box-shadow 0.2s ease;
-}
-
-.movie.dragging {
-  opacity: 0.5;
-  border: 2px dashed #ff5757;
-  background-color: #ffe6e6;
 }
 
 /* Estilo para cada diapositiva */

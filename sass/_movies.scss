@@ -10,7 +10,7 @@ div.movie {
   display: inline-block;
   width: auto;
   padding: 10px;
-  box-shadow: 2px 2px 7px #ccc;
+  box-shadow: 2px 2px 7px #ff5757;
   margin: 5px;
 }
 
@@ -39,11 +39,11 @@ button {
 
 button.index, button.search {
   background: var(--primary);
-  color: white;
+  color: #ff5757;
 }
 
 button:hover {
-  background: white;
+  background: #ff5757;
   color: var(--primary);
 }
 
